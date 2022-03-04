@@ -68,7 +68,7 @@
                             </form> -->
                              <form class="input-group p-3" action="{{ '/explore' }}" method="GET">
                                 <input type="text" class="form-control rounded" name="search" placeholder="Cauta" value="{{ request()->query('search') }}">
-                                <button type="button" class="btn btn-outline-secondary">Caută</button>
+                                <button type="submit" class="btn btn-outline-secondary">Caută</button>
                              </form>
                             </li>
 

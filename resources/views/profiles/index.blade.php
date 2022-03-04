@@ -12,7 +12,10 @@
                 <div class="d-flex align-items-center pb-3">
                     <div class="fw-bolder display-6">{{ $user->username }}</div>
                     <div> &nbsp </div>
+                    @can('update', $user->profile)
+                    @else
                     <follow-button user-id="{{ $user->id }}" follows="{{ $follows }}"></follow-button>
+                    @endcan
                 </div>
 
                 @can('update', $user->profile)

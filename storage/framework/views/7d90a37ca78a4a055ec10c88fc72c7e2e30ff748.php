@@ -68,7 +68,7 @@
                             </form> -->
                              <form class="input-group p-3" action="<?php echo e('/explore', false); ?>" method="GET">
                                 <input type="text" class="form-control rounded" name="search" placeholder="Cauta" value="<?php echo e(request()->query('search'), false); ?>">
-                                <button type="button" class="btn btn-outline-secondary">Caută</button>
+                                <button type="submit" class="btn btn-outline-secondary">Caută</button>
                              </form>
                             </li>
 

@@ -17,7 +17,7 @@ class ExploreController extends Controller
             
            $posts=Post::where('caption', 'LIKE', '%' . $search . '%')->latest()->paginate(24);
         } else{
-            $posts= Post::latest()->paginate(24);
+            $posts= Post::latest()->paginate(4);
         }
         
         return view('posts.explore', compact('posts'));

@@ -25,11 +25,12 @@
 
     
     <div class="row">
-      
+    <nav aria-label="...">
             <div class="pagination col-12 d-flex justify-content-center ">
                 <?php echo e($posts->appends(['search' => request()->query('search')])->links(), false); ?>
 
                 </div>
+    </nav>
      </div>
 
 </div>

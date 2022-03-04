@@ -27,10 +27,11 @@
 
     
     <div class="row">
-      
+    <nav aria-label="...">
             <div class="pagination col-12 d-flex justify-content-center ">
                 {{ $posts->appends(['search' => request()->query('search')])->links() }}
                 </div>
+    </nav>
      </div>
 
 </div>
