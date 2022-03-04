@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
   <!--Form Specific CSS-->
-  <link href="<?php echo e(asset('css/form.css')); ?>" rel="stylesheet">
+  <link href="<?php echo e(asset('css/form.css'), false); ?>" rel="stylesheet">
 
   <title>Autentificare - <?php echo $__env->yieldContent('title'); ?></title>
 </head>
@@ -23,7 +23,7 @@
 
         </div>
         <div class="card-body">
-          <form method="POST" action="<?php echo e(route('login')); ?>">
+          <form method="POST" action="<?php echo e(route('login'), false); ?>">
             <?php echo csrf_field(); ?>
 
             <div class="input-group form-group">
@@ -37,14 +37,14 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" name="email" value="<?php echo e(old('email')); ?>" placeholder="Adresa de email" required autocomplete="email" autofocus>
+unset($__errorArgs, $__bag); ?>" name="email" value="<?php echo e(old('email'), false); ?>" placeholder="Adresa de email" required autocomplete="email" autofocus>
               <?php $__errorArgs = ['email'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?>
               <span class="invalid-feedback" role="alert">
-                <strong><?php echo e($message); ?></strong>
+                <strong><?php echo e($message, false); ?></strong>
               </span>
               <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
@@ -71,7 +71,7 @@ if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?>
               <span class="invalid-feedback" role="alert">
-                <strong><?php echo e($message); ?></strong>
+                <strong><?php echo e($message, false); ?></strong>
               </span>
               <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
@@ -81,14 +81,14 @@ unset($__errorArgs, $__bag); ?>
 
 
             <div class="row align-items-center remember">
-              <input type="checkbox" name="remember" id="remember" <?php echo e(old('remember') ? 'checked' : ''); ?>>
+              <input type="checkbox" name="remember" id="remember" <?php echo e(old('remember') ? 'checked' : '', false); ?>>
               Ține minte
             </div>
 
 
             <div class="form-group">
               <button type="submit" class="btn float-right login_btn">
-                <?php echo e(__('Logare')); ?>
+                <?php echo e(__('Logare'), false); ?>
 
               </button>
             </div>
@@ -99,16 +99,16 @@ unset($__errorArgs, $__bag); ?>
         <!-- Parte subsol formular     -->
         <div class="card-footer">
           <div class="d-flex justify-content-center links">
-            <a class="btn btn-link" href="<?php echo e(route('register')); ?>">
-              <?php echo e(__('Înregistrează-te')); ?>
+            <a class="btn btn-link" href="<?php echo e(route('register'), false); ?>">
+              <?php echo e(__('Înregistrează-te'), false); ?>
 
             </a>
           </div>
 
           <div class="d-flex justify-content-center">
             <?php if(Route::has('password.request')): ?>
-            <a class="btn btn-link" href="<?php echo e(route('password.request')); ?>">
-              <?php echo e(__('Ai uitat parola?')); ?>
+            <a class="btn btn-link" href="<?php echo e(route('password.request'), false); ?>">
+              <?php echo e(__('Ai uitat parola?'), false); ?>
 
             </a>
             <?php endif; ?>
@@ -117,7 +117,13 @@ unset($__errorArgs, $__bag); ?>
 
       </div>
     </div>
+    
   </div>
+  <div class="d-flex justify-content-center fixed-bottom pb-5"><a href="/admin"><button type="button" class="btn btn-outline-light">Admin</button></a></div>
+
+  
+
+
 </body>
 
 <?php $__env->stopSection(); ?>

@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '1c74a42f985b1937182ee8cb40d44c372be09bdd',
+    'reference' => 'c1a6d4c44d68a4f0eb03bf5b92342b5034ee7280',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -183,6 +183,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '0dbf5d78455d4d6a41d186da50adc1122ec066f4',
+    ),
+    'encore/laravel-admin' => 
+    array (
+      'pretty_version' => 'v1.8.17',
+      'version' => '1.8.17.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '45c58c656fcc6a8c57423d2256f3b7a73e783441',
     ),
     'facade/flare-client-php' => 
     array (
@@ -516,6 +525,15 @@ private static $installed = array (
         0 => '*',
       ),
     ),
+    'laravel-admin-ext/media-manager' => 
+    array (
+      'pretty_version' => 'v2.0.3',
+      'version' => '2.0.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '5460de965849a0723289f610beec479755d4ec1e',
+    ),
     'laravel/framework' => 
     array (
       'pretty_version' => 'v8.83.1',
@@ -532,7 +550,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '1c74a42f985b1937182ee8cb40d44c372be09bdd',
+      'reference' => 'c1a6d4c44d68a4f0eb03bf5b92342b5034ee7280',
     ),
     'laravel/sail' => 
     array (
@@ -1177,6 +1195,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '6f981ee24cf69ee7ce9736146d1c57c2780598a8',
+    ),
+    'symfony/dom-crawler' => 
+    array (
+      'pretty_version' => 'v5.4.5',
+      'version' => '5.4.5.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '50777f44e7dc37e16959ca65041df2acd6a65775',
     ),
     'symfony/error-handler' => 
     array (

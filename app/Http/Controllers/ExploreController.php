@@ -10,7 +10,15 @@ class ExploreController extends Controller
 {
     public function index()
     {
-        $posts= Post::latest()->paginate(24);
+        
+        $search =request()->query('search');
+
+        if ($search) {
+            
+           $posts=Post::where('caption', 'LIKE', '%' . $search . '%')->latest()->paginate(24);
+        } else{
+            $posts= Post::latest()->paginate(24);
+        }
         
         return view('posts.explore', compact('posts'));
     }

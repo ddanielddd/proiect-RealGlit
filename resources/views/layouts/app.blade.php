@@ -8,8 +8,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>RealGlit</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/storage/images/favicon.ico">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -26,6 +24,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
+                
                 <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
                     <div><img src="/svg/RealGlitLogo.svg" style="height: 45px;"></div>
                     <!-- <div>RealGlit</div> -->
@@ -37,8 +36,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-
+                        
                     </ul>
+
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -56,9 +56,24 @@
                                 </li>
                             @endif
                         @else
-                        <div class="d-flex justify-content-between align-items-baseline">
+                        
+                        <div class="d-flex justify-content-between align-items-center">
+
+                            <li class="nav-item">
+                            <!-- <form class="input-group" action="{{ '/explore' }}" method="GET">
+                                <input type="text" class="form-control rounded" name="search" placeholder="Cauta" value="{{ request()->query('search') }}">
+                                    <div class="input-group-addon">
+                                        <span class="input-group-text"><i class="ti-search"></i></span>
+                                    </div>
+                            </form> -->
+                             <form class="input-group p-3" action="{{ '/explore' }}" method="GET">
+                                <input type="text" class="form-control rounded" name="search" placeholder="Cauta" value="{{ request()->query('search') }}">
+                                <button type="button" class="btn btn-outline-secondary">Caută</button>
+                             </form>
+                            </li>
+
                             <li class="nav-item"><a href="/explore"><button type="button" class="btn btn-outline-dark">Explorează</button></a></li>
-                         
+
 
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle"  href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -85,6 +100,7 @@
                                 </div>
                             </li>
                             </div>
+                            
                         @endguest
                     </ul>
                 </div>

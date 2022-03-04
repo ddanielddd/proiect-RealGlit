@@ -33,9 +33,7 @@ Route::post('/p', 'App\Http\Controllers\PostsController@store');
 Route::get('/p/{post}', 'App\Http\Controllers\PostsController@show');
 Route::get('/p/{post}/delete', 'App\Http\Controllers\PostsController@destroy') ->name('post.destroy');
 
-// Route::get('/explore', 'App\Http\Controllers\PostsController@allPosts')->name('explore.index');
 Route::get('/explore', 'App\Http\Controllers\ExploreController@index')->name('explore.index');
-
 
 Route::get('/profile/{user}', 'App\Http\Controllers\ProfilesController@index')->name('profile.show');
 Route::get('/profile/{user}/edit', 'App\Http\Controllers\ProfilesController@edit')->name('profile.edit');

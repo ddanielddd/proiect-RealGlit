@@ -30,6 +30,8 @@ return [
 
     'disks' => [
 
+        'admin' => [ 'driver' => 'local', 'root' => storage_path('app'), ],
+        
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),
@@ -38,7 +40,7 @@ return [
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
+            'url' => env('APP_URL').'/storage',    // set url
             'visibility' => 'public',
         ],
 
@@ -69,5 +71,7 @@ return [
     'links' => [
         public_path('storage') => storage_path('app/public'),
     ],
+    
+    
 
 ];

@@ -6,6 +6,17 @@
       0 => 'Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider',
     ),
   ),
+  'encore/laravel-admin' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Encore\\Admin\\AdminServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Admin' => 'Encore\\Admin\\Facades\\Admin',
+    ),
+  ),
   'facade/ignition' => 
   array (
     'providers' => 
@@ -33,6 +44,13 @@
     'aliases' => 
     array (
       'Image' => 'Intervention\\Image\\Facades\\Image',
+    ),
+  ),
+  'laravel-admin-ext/media-manager' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Encore\\Admin\\Media\\MediaServiceProvider',
     ),
   ),
   'laravel/sail' => 
