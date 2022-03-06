@@ -48,8 +48,8 @@ class PostController extends AdminController
 
         $show->field('id', __('Id'));
         $show->field('user_id', __('User id'));
-        $show->field('caption', __('Caption'));
-        $show->field('image', __('Image'));
+        $show->field('caption', __('Descriere'));
+        $show->field('image', __('Image'))->image();
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -66,7 +66,7 @@ class PostController extends AdminController
         $form = new Form(new Post());
 
         $form->number('user_id', __('User id'));
-        $form->text('caption', __('Caption'));
+        $form->text('caption', __('Descriere'));
         $form->image('image', __('Image'));
 
         return $form;

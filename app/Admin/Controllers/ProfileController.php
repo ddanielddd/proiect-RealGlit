@@ -73,7 +73,7 @@ class ProfileController extends AdminController
         $form->text('title', __('Title'));
         $form->textarea('description', __('Description'));
         $form->url('url', __('Url'));
-        $form->image('image', __('Image'))->move('/profile');
+        $form->image('image', __('Image'))->move('/app/public/profile');
         
         
         return $form;

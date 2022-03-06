@@ -41,13 +41,23 @@
     </div>
 
     <div class="row pt-5">
-        <?php $__currentLoopData = $user->posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <?php $__empty_1 = true; $__currentLoopData = $user->posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
             <div class="col-3 pb-4">
                 <a href="/p/<?php echo e($post->id, false); ?>">
                     <img src="/storage/<?php echo e($post->image, false); ?>" class="w-100">
                 </a>
             </div>
-        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
+          <p class="text-center">
+           
+           <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('update', $user->profile)): ?>
+                <strong>
+                    <a href="/p/create"><button type="button" class="btn btn-outline-dark">Publica prima postare</button></a>
+                </strong>
+                <?php endif; ?>
+        </p>
+        <?php endif; ?>
     </div>
 </div>
 <?php $__env->stopSection(); ?>

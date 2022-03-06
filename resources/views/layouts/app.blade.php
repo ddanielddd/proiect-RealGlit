@@ -112,4 +112,8 @@
         </main>
     </div>
 </body>
+
+<footer class="text-center">&copy; Copyright <?php echo date("Y"); ?> Dicher Daniel </footer>
+
+
 </html>

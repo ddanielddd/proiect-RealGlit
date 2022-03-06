@@ -119,7 +119,7 @@ unset($__errorArgs, $__bag); ?>
     </div>
     
   </div>
-  <div class="d-flex justify-content-center fixed-bottom pb-5"><a href="/admin"><button type="button" class="btn btn-outline-light">Admin</button></a></div>
+  <!-- <div class="d-flex justify-content-center fixed-bottom pb-5"><a href="/admin"><button type="button" class="btn btn-outline-light">Admin</button></a></div> -->
 
   
 

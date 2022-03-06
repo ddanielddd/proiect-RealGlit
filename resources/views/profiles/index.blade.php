@@ -43,13 +43,23 @@
     </div>
 
     <div class="row pt-5">
-        @foreach($user->posts as $post)
+        @forelse($user->posts as $post)
             <div class="col-3 pb-4">
                 <a href="/p/{{ $post->id }}">
                     <img src="/storage/{{ $post->image }}" class="w-100">
                 </a>
             </div>
-        @endforeach
+
+        @empty
+          <p class="text-center">
+           
+           @can('update', $user->profile)
+                <strong>
+                    <a href="/p/create"><button type="button" class="btn btn-outline-dark">Publica prima postare</button></a>
+                </strong>
+                @endcan
+        </p>
+        @endforelse
     </div>
 </div>
 @endsection

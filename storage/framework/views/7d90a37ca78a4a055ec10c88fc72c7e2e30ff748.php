@@ -114,5 +114,9 @@
         </main>
     </div>
 </body>
+
+<footer class="text-center">&copy; Copyright <?php echo date("Y"); ?> Dicher Daniel </footer>
+
+
 </html>
 <?php /**PATH C:\laragon\www\RealGlit\resources\views/layouts/app.blade.php ENDPATH**/ ?>

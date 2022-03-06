@@ -34,7 +34,7 @@ return [
     | '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo-mini' => '<b>La</b>',
+    'logo-mini' => '<img src="http://localhost:8000/svg/RealGlitLogo.svg" alt="Admin logo">',
 
     /*
     |--------------------------------------------------------------------------

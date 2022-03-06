@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    @foreach($posts as $post)
+    @forelse($posts as $post)
         <div class="row">
             <div class="col-6 offset-3">
                 <a href="/p/{{ $post->id }}">
@@ -31,7 +31,16 @@
 
             </div>
         </div>
-    @endforeach
+    @empty
+    <p class="text-center">     
+        Momentan nu urmăriți pe nimeni. <br>
+        Folosiți funcția 
+                <strong>
+                    <a href="/explore">Explorează</a> pentru a descoperi postări.
+                </strong>
+            
+        </p>
+    @endforelse
 
         <div class="row">
             <div class="col-12 d-flex justify-content-center">
